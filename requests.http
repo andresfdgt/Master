@@ -1,0 +1,305 @@
+
+### Autenticando usuario
+# URL https://dashboard.iglenube.com/api/auth
+POST http://127.0.0.1:8000/api/auth
+Content-Type: application/json
+Accept: application/json
+
+{
+    "correo": "cevillalbas@misena.edu.co",
+    "password": "cevillalbas"
+}
+
+### lista de miembros
+GET http://127.0.0.1:8000/api/miembros
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 21|MlCKp1hPadrJZa7MxAL0KeDBub6Bb4V4TxuS3FQh
+
+### lista de miembros con busqueda
+GET http://127.0.0.1:8000/api/miembros?search=cristian
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 21|MlCKp1hPadrJZa7MxAL0KeDBub6Bb4V4TxuS3FQh
+
+### detalle de miembro
+GET http://127.0.0.1:8000/api/miembros/6
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 21|MlCKp1hPadrJZa7MxAL0KeDBub6Bb4V4TxuS3FQh
+
+### departamentos
+GET http://127.0.0.1:8000/api/configuraciones/departamentos
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 21|MlCKp1hPadrJZa7MxAL0KeDBub6Bb4V4TxuS3FQh
+
+### municipios
+GET http://127.0.0.1:8000/api/configuraciones/municipios/20
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 21|MlCKp1hPadrJZa7MxAL0KeDBub6Bb4V4TxuS3FQh
+
+
+### datos de la iglesia
+GET http://127.0.0.1:8000/api/configuraciones/iglesia
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 21|MlCKp1hPadrJZa7MxAL0KeDBub6Bb4V4TxuS3FQh
+
+### datos de la iglesia
+PUT http://127.0.0.1:8000/api/configuraciones/iglesia
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 21|MlCKp1hPadrJZa7MxAL0KeDBub6Bb4V4TxuS3FQh
+
+{
+    "nombre": "prueba",
+    "email": "correo@gmail.com",
+    "telefono": "3172526468",
+    "direccion": "calle falsa 123",
+    "departamento": 0,
+    "municipio": 0
+}
+
+### lista de jerarquias
+GET http://127.0.0.1:8000/api/configuraciones/jerarquias
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 21|MlCKp1hPadrJZa7MxAL0KeDBub6Bb4V4TxuS3FQh
+
+### crear jerarquia
+POST http://127.0.0.1:8000/api/configuraciones/jerarquias
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 21|MlCKp1hPadrJZa7MxAL0KeDBub6Bb4V4TxuS3FQh
+
+{
+    "nombre": "pastore"
+}
+
+### actualizar jerarquia
+PUT http://127.0.0.1:8000/api/configuraciones/jerarquias/8
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 21|MlCKp1hPadrJZa7MxAL0KeDBub6Bb4V4TxuS3FQh
+
+{
+    "nombre": "pastores"
+}
+
+### eliminar jerarquia
+DELETE  http://127.0.0.1:8000/api/configuraciones/jerarquias/8
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 21|MlCKp1hPadrJZa7MxAL0KeDBub6Bb4V4TxuS3FQh
+
+
+### lista de jerarquias
+GET http://127.0.0.1:8000/api/configuraciones/tipo_ministerios
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 21|MlCKp1hPadrJZa7MxAL0KeDBub6Bb4V4TxuS3FQh
+
+### crear jerarquia
+POST http://127.0.0.1:8000/api/configuraciones/tipo_ministerios
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 21|MlCKp1hPadrJZa7MxAL0KeDBub6Bb4V4TxuS3FQh
+
+{
+    "nombre": "pastore"
+}
+
+### actualizar jerarquia
+PUT http://127.0.0.1:8000/api/configuraciones/tipo_ministerios/8
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 21|MlCKp1hPadrJZa7MxAL0KeDBub6Bb4V4TxuS3FQh
+
+{
+    "nombre": "pastores"
+}
+
+### eliminar jerarquia
+DELETE  http://127.0.0.1:8000/api/configuraciones/tipo_ministerios/8
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 21|MlCKp1hPadrJZa7MxAL0KeDBub6Bb4V4TxuS3FQh
+
+
+### lista de estudios
+GET http://127.0.0.1:8000/api/estudios?search=cris
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 21|MlCKp1hPadrJZa7MxAL0KeDBub6Bb4V4TxuS3FQh
+
+### crear estudio
+POST http://127.0.0.1:8000/api/estudios
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 21|MlCKp1hPadrJZa7MxAL0KeDBub6Bb4V4TxuS3FQh
+
+{
+    "nombre": "pastore"
+}
+
+### actualizar estudio
+PUT http://127.0.0.1:8000/api/estudios/8
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 21|MlCKp1hPadrJZa7MxAL0KeDBub6Bb4V4TxuS3FQh
+
+{
+    "nombre": "pastores"
+}
+
+### eliminar estudio
+DELETE  http://127.0.0.1:8000/api/estudios/8
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 21|MlCKp1hPadrJZa7MxAL0KeDBub6Bb4V4TxuS3FQh
+
+### lista de ministerios
+GET http://127.0.0.1:8000/api/ministerios?search=cris
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 21|MlCKp1hPadrJZa7MxAL0KeDBub6Bb4V4TxuS3FQh
+
+### crear ministerio
+POST http://127.0.0.1:8000/api/ministerios
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 21|MlCKp1hPadrJZa7MxAL0KeDBub6Bb4V4TxuS3FQh
+
+{
+    "nombre": "pastore"
+}
+
+### actualizar ministerio
+PUT http://127.0.0.1:8000/api/ministerios/8
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 21|MlCKp1hPadrJZa7MxAL0KeDBub6Bb4V4TxuS3FQh
+
+{
+    "nombre": "pastores"
+}
+
+### eliminar ministerio
+DELETE  http://127.0.0.1:8000/api/ministerios/8
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 21|MlCKp1hPadrJZa7MxAL0KeDBub6Bb4V4TxuS3FQh
+
+### lista de celulas
+GET http://127.0.0.1:8000/api/celulas?search=cris
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 21|MlCKp1hPadrJZa7MxAL0KeDBub6Bb4V4TxuS3FQh
+
+### crear celula
+POST http://127.0.0.1:8000/api/celulas
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 21|MlCKp1hPadrJZa7MxAL0KeDBub6Bb4V4TxuS3FQh
+
+{
+    "nombre": "pastore"
+}
+
+### actualizar celula
+PUT http://127.0.0.1:8000/api/celulas/8
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 21|MlCKp1hPadrJZa7MxAL0KeDBub6Bb4V4TxuS3FQh
+
+{
+    "nombre": "pastores"
+}
+
+### eliminar celula
+DELETE  http://127.0.0.1:8000/api/celulas/8
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 21|MlCKp1hPadrJZa7MxAL0KeDBub6Bb4V4TxuS3FQh
+
+
+### lista de agendas
+GET http://127.0.0.1:8000/api/agendas?search=cris
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 21|MlCKp1hPadrJZa7MxAL0KeDBub6Bb4V4TxuS3FQh
+
+### crear agenda
+POST http://127.0.0.1:8000/api/agendas
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 21|MlCKp1hPadrJZa7MxAL0KeDBub6Bb4V4TxuS3FQh
+
+{
+    "nombre": "pastore",
+    "fecha_inicio":"2021-09-13",
+    "fecha_fin":"2021-09-14"
+}
+
+### actualizar agenda
+PUT http://127.0.0.1:8000/api/agendas/8
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 21|MlCKp1hPadrJZa7MxAL0KeDBub6Bb4V4TxuS3FQh
+
+{
+    "nombre": "pastores",
+    "fecha_inicio":"2021-09-13",
+    "fecha_fin":"2021-09-14"
+}
+
+### eliminar agenda
+DELETE  http://127.0.0.1:8000/api/agendas/8
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 21|MlCKp1hPadrJZa7MxAL0KeDBub6Bb4V4TxuS3FQh
+
+
+### lista de conversiones
+GET http://127.0.0.1:8000/api/conversiones
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 21|MlCKp1hPadrJZa7MxAL0KeDBub6Bb4V4TxuS3FQh
+
+### lista de conversiones
+GET http://127.0.0.1:8000/api/conversiones/buscar?search=c
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 21|MlCKp1hPadrJZa7MxAL0KeDBub6Bb4V4TxuS3FQh
+
+### crear conversiones
+POST http://127.0.0.1:8000/api/conversiones
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 21|MlCKp1hPadrJZa7MxAL0KeDBub6Bb4V4TxuS3FQh
+
+{
+    "iglesia": "pastore",
+    "fecha":"2021-09-13",
+    "miembro":8
+}
+
+### actualizar conversiones
+PUT http://127.0.0.1:8000/api/conversiones/8
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 21|MlCKp1hPadrJZa7MxAL0KeDBub6Bb4V4TxuS3FQh
+
+{
+    "nombre": "pastores",
+    "fecha_inicio":"2021-09-13",
+    "fecha_fin":"2021-09-14"
+}
+
+### eliminar conversiones
+DELETE  http://127.0.0.1:8000/api/conversiones/8
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer 21|MlCKp1hPadrJZa7MxAL0KeDBub6Bb4V4TxuS3FQh

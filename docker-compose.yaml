@@ -1,0 +1,25 @@
+version: "3.7"
+services:
+  app:
+    build:
+      args:
+        user: recp
+        uid: 1000
+      context: ./
+      dockerfile: Dockerfile
+    image: master
+    container_name: master-app
+    restart: unless-stopped
+    working_dir: /var/www/
+    command: php artisan serve --host=0.0.0.0 --port=8000
+    ports:
+      - 8000:8000
+    volumes:
+      - ./:/var/www
+    networks:
+      - master
+
+networks:
+  master:
+    name: master
+    driver: bridge
